@@ -1,0 +1,56 @@
+hoang@hoang-VirtualBox:~$ ps -aux
+_apt      1858  1.0  0.2  53940  5684 ?        S    08:44   0:06 /usr/lib/apt/me
+_apt      1859  0.0  0.2  53936  5524 ?        S    08:44   0:00 /usr/lib/apt/me
+hoang     1862  0.0  0.4 523632  8796 ?        Sl   08:44   0:00 /usr/lib/x86_64
+root      2033  0.0  0.4 274820  9800 ?        Ssl  08:47   0:00 /usr/sbin/cups-
+hoang     2186  0.0  1.8 590324 38748 ?        Sl   08:49   0:00 gedit /home/hoa
+root      2201  0.0  0.0      0     0 ?        S    08:51   0:00 [kworker/u2:1]
+hoang     2233  0.0  0.8 655564 16848 ?        Sl   08:51   0:00 /usr/lib/x86_64
+hoang     2245  0.0  1.1 658348 22596 ?        Sl   08:51   0:00 /usr/bin/unity-
+hoang     2246  0.0  0.6 565440 13076 ?        Sl   08:51   0:00 /usr/lib/x86_64
+hoang     2278  0.1  1.7 670628 35440 ?        Sl   08:51   0:00 /usr/lib/gnome-
+hoang     2285  0.0  0.2  31192  5072 pts/4    Ss   08:51   0:00 bash
+root      2349  0.0  0.0      0     0 ?        S    08:53   0:00 [kworker/0:0]
+hoang     2358  0.0  0.1  45960  3276 pts/4    R+   08:54   0:00 ps -aux
+
+hoang@hoang-VirtualBox:~$ ps aux | grep firefox
+hoang     1637  4.2 16.3 2144900 334376 ?      Sl   08:42   0:34 /usr/lib/firefox/firefox
+hoang     2406  0.0  0.0  22820   972 pts/4    S+   08:56   0:00 grep --color=auto firefox
+
+hoang@hoang-VirtualBox:~$ cat /proc/1637/status
+SigPnd:	0000000000000000
+ShdPnd:	0000000000000000
+SigBlk:	0000000000000000
+SigIgn:	0000000000001000
+SigCgt:	0000000f820044ff
+CapInh:	0000000000000000
+CapPrm:	0000000000000000
+CapEff:	0000000000000000
+CapBnd:	0000003fffffffff
+CapAmb:	0000000000000000
+NoNewPrivs:	0
+Seccomp:	0
+Cpus_allowed:	1
+Cpus_allowed_list:	0
+Mems_allowed:	00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001
+Mems_allowed_list:	0
+voluntary_ctxt_switches:	65405
+nonvoluntary_ctxt_switches:	207880
+
+hoang@hoang-VirtualBox:~$ kill -stop 1637
+hoang@hoang-VirtualBox:~$ cat /proc/1637/status
+Name:	firefox
+Umask:	0002
+State:	T (stopped)
+
+hoang@hoang-VirtualBox:~$ kill -cont 1637
+hoang@hoang-VirtualBox:~$ cat /proc/1637/status
+Name:	firefox
+Umask:	0002
+State:	S (sleeping)
+
+hoang@hoang-VirtualBox:~$ kill -kill 1637
+hoang@hoang-VirtualBox:~$ cat /proc/1637/status
+cat: /proc/1637/status: No such file or directory
+
+
