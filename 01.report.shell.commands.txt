@@ -1,0 +1,89 @@
+hoang@hoang-VirtualBox:~$ echo hello world
+hello world
+
+hoang@hoang-VirtualBox:~$ passwd
+Changing password for hoang.
+(current) UNIX password: 
+Enter new UNIX password: 
+Retype new UNIX password: 
+Password unchanged
+Enter new UNIX password: 
+Retype new UNIX password: 
+Password unchanged
+Enter new UNIX password: 
+Retype new UNIX password: 
+You must choose a longer password
+passwd: Authentication token manipulation error
+passwd: password unchanged
+
+hoang@hoang-VirtualBox:~$ date
+Fri Jan  5 11:29:46 ICT 2018
+
+
+hoang@hoang-VirtualBox:~$ hostname
+hoang-VirtualBox
+
+hoang@hoang-VirtualBox:~$ arch
+x86_64
+
+hoang@hoang-VirtualBox:~$ uname -s
+Linux
+
+hoang@hoang-VirtualBox:~$ dmesg
+....
+[    4.855036] audit: type=1400 audit(1515124350.660:9): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/evince//sanitized_helper" pid=491 comm="apparmor_parser"
+[    4.855037] audit: type=1400 audit(1515124350.660:10): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/evince-previewer" pid=491 comm="apparmor_parser"
+[    5.209725] snd_intel8x0 0000:00:05.0: white list rate for 1028:0177 is 48000
+[    5.305320] Adding 2095100k swap on /dev/sda5.  Priority:-1 extents:1 across:2095100k FS
+[    5.468517] random: crng init done
+[    6.147196] IPv6: ADDRCONF(NETDEV_UP): enp0s3: link is not ready
+[    6.151194] IPv6: ADDRCONF(NETDEV_UP): enp0s3: link is not ready
+[    6.157533] e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+[    6.157759] IPv6: ADDRCONF(NETDEV_CHANGE): enp0s3: link becomes ready
+[    7.781232] floppy0: no floppy controllers found
+[    7.781260] work still pending
+
+hoang@hoang-VirtualBox:~$ uptime
+ 10:53:37 up 1 min,  1 user,  load average: 0,75, 0,32, 0,11
+
+hoang@hoang-VirtualBox:~$ who am i
+hoang@hoang-VirtualBox:~$ whoami
+hoang
+
+hoang@hoang-VirtualBox:~$ who
+hoang    tty7         2018-01-05 10:52 (:0)
+
+hoang@hoang-VirtualBox:~$ id
+uid=1000(hoang) gid=1000(hoang) groups=1000(hoang),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),113(lpadmin),128(sambashare)
+
+hoang@hoang-VirtualBox:~$ last
+hoang    tty7         :0               Fri Jan  5 10:52    gone - no logout
+reboot   system boot  4.10.0-28-generi Fri Jan  5 10:52   still running
+hoang    tty7         :0               Fri Jan  5 10:45 - crash  (00:06)
+reboot   system boot  4.10.0-28-generi Fri Jan  5 10:45   still running
+hoang    tty7         :0               Fri Jan  5 10:39 - crash  (00:06)
+reboot   system boot  4.10.0-28-generi Fri Jan  5 10:39   still running
+hoang    tty7         :0               Fri Jan  5 09:52 - crash  (00:46)
+reboot   system boot  4.10.0-28-generi Fri Jan  5 09:52   still running
+hoang    tty7         :0               Fri Jan  5 08:43 - crash  (01:09)
+reboot   system boot  4.10.0-28-generi Fri Jan  5 08:43   still running
+hoang    tty7         :0               Fri Jan  5 03:33 - crash  (05:10)
+reboot   system boot  4.10.0-28-generi Fri Jan  5 03:33   still running
+
+wtmp begins Fri Jan  5 03:33:35 2018
+
+hoang@hoang-VirtualBox:~$ finger
+The program 'finger' is currently not installed. You can install it by typing:
+sudo apt install finger
+
+hoang@hoang-VirtualBox:~$ w
+ 10:55:04 up 2 min,  1 user,  load average: 0,39, 0,31, 0,13
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+hoang    tty7     :0               10:52    2:34   9.50s  0.07s /sbin/upstart
+
+// Finger after sudo apt install finger
+hoang@hoang-VirtualBox:~$ finger
+Login     Name       Tty      Idle  Login Time   Office     Office Phone
+hoang     Hoang      tty7        3  Jan  5 10:52 (:0)
+
+
