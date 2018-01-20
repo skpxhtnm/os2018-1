@@ -1,0 +1,4 @@
+$ ps -o nlwp 1705
+NLWP
+  60
+
