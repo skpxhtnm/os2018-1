@@ -1,4 +1,9 @@
-$ ps -o nlwp 1705
+hoang@hoang-VirtualBox:~$ ps aux | grep firefox
+hoang     1705 10.7 13.7 2375132 280860 ?      Sl   09:37   0:14 /home/hoang/Downloads/firefox/firefox-bin
+hoang     1709  0.0  0.0      0     0 ?        Z    09:37   0:00 [firefox-bin] <defunct>
+hoang     1756  0.6  5.6 1676228 114400 ?      Sl   09:38   0:00 /home/hoang/Downloads/firefox/firefox-bin
+
+hoang@hoang-VirtualBox:~$ ps -o nlwp 1705
 NLWP
   60
 
