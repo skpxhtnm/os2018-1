@@ -30,7 +30,7 @@ void produce(item *i){
 	first = (first + 1) % BUFFER_SIZE;
 }
 
-void *consume(){
+item *consume(){
 	item *i = malloc(sizeof(item));
 	while (first == last){
 	}
@@ -41,17 +41,14 @@ void *consume(){
 
 void print(item *i){
 	if(i == NULL) return;
-	printf("%s %d %s, i->type, i->amount, i->unit);
+	printf("%s %d %s\n", i->type, i->amount, i->unit);
 }
-
 int main(){
 	item item1, item2;
 	item1 = newItem(0,5,0);
 	item2 = newItem(1,200,1);
-
 	produce(&item1);
 	produce(&item2);
-
 	print((consume()));
 	return 0;
 }
