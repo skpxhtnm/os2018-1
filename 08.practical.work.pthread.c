@@ -31,7 +31,7 @@ void produce(item *i){
 	first = (first + 1) % BUFFER_SIZE;
 }
 
-void *consume(){
+item *consume(){
 	item *i = malloc(sizeof(item));
 	while (first == last){
 	}
@@ -42,7 +42,7 @@ void *consume(){
 
 void print(item *i){
 	if(i == NULL) return;
-	printf("%s %d %s, i->type, i->amount, i->unit);
+	printf("%s %d %s\n", i->type, i->amount, i->unit);
 }
 
 void *produceThread(void *param){
