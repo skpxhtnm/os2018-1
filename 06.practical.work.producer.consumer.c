@@ -52,6 +52,6 @@ int main(){
 	produce(&item1);
 	produce(&item2);
 
-	print(consume());
+	print((consume()));
 	return 0;
 }
