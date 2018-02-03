@@ -17,7 +17,7 @@ P2	|					 XXXXXXXXXXXXXXXXXXXX
 P3	|							     XXXXX
 P4	|								  XXXXXXXXXXXXXXXXXXXXXXXXX
 	
--SJF:(non preemtive)				
+-SJF:(non preemptive)				
 						Time (in ms)
 	0                        5                        10                       15             18
 	+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+----+
